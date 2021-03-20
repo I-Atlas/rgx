@@ -30,12 +30,12 @@ const notFoundTexts = [
 
 export const NotFoundPage: React.FC = () => {
   const randomInfo = notFoundTexts[randomRange(0, notFoundTexts.length - 1)];
-  const randomImg = `/images/${randomRange(1, 10)}.svg`;
+  const randomImg = `/images/${randomRange(1, 5)}.svg`;
 
   return (
     <div>
       <div className="patterns__no-result">
-        <img width={300} height={300} src={randomImg} alt="Not found" />
+        <img width={400} height={400} src={randomImg} alt="Not found" />
         <h2>{randomInfo.title}</h2>
         <p dangerouslySetInnerHTML={{ __html: randomInfo.text }} />
       </div>
