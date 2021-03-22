@@ -3,8 +3,8 @@
 ![GitHub](https://img.shields.io/github/license/I-Atlas/rgx?style=flat-square)
 [![Iliya Bolotov](https://img.shields.io/badge/iliya-bolotov-%23ff6f61?style=flat-square&logo=appveyor)](https://github.com/I-Atlas)
 
-<a href="https://iliya-bolotov.space/">
-    <img src="https://i.imgur.com/D1FOJUr.png" alt="Homepage">
+<a href="https://rgx.vercel.app/">
+    <img src="https://i.imgur.com/D1FOJUr.png" alt="RGX">
 </a>
 
 ## ⚓ Regular Expression Collection
