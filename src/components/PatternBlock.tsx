@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tippy";
 
@@ -25,15 +25,15 @@ const checkRegExp = (value: string, pattern: string): string[] => {
   return [...(matches || [])].filter((v) => v);
 };
 
-export const PatternBlock: React.FC<PatternBlockProps> = ({
+export const PatternBlock: FC<PatternBlockProps> = ({
   title,
   description,
   pattern,
   placeholder,
   tags,
 }) => {
-  const [inputValue, setInputValue] = React.useState<string>("");
-  const { lang } = React.useContext(StateContext);
+  const [inputValue, setInputValue] = useState<string>("");
+  const { lang } = useContext(StateContext);
 
   const titleVal = title[lang];
   const descriptionVal = description?.[lang];
