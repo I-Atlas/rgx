@@ -1,10 +1,10 @@
-import React from "react";
+import { FC, ChangeEvent, useContext } from "react";
 import { Link } from "react-router-dom";
 import { StateContext } from "../context";
 import { clearFilters, setSearchValue } from "../store/actions";
 
-export const Header: React.FC = () => {
-  const { dispatch, searchValue } = React.useContext(StateContext);
+export const Header: FC = () => {
+  const { dispatch, searchValue } = useContext(StateContext);
 
   const handleClickLogo = (): void => {
     if (dispatch) {
@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
     }
   };
 
-  const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>): void => {
     if (dispatch) {
       dispatch(setSearchValue(e.target.value));
     }

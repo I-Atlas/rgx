@@ -1,15 +1,17 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { Panels } from "./components/Panels";
 import "./styles/app.scss";
 import "react-tippy/dist/tippy.css";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
+    <Panels />
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById("root"),
 );
 
