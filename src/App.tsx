@@ -16,7 +16,7 @@ function App() {
     const timer = setTimeout(() => {
       document.body.style.overflowY = "unset";
       setAnimationEnd(true);
-    }, 1000);
+    }, 1700);
     return () => clearTimeout(timer);
   }, []);
 

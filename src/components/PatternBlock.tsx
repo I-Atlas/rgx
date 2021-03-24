@@ -1,7 +1,7 @@
 import { FC, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tippy";
-
+import { motion } from "framer-motion";
 import { StateContext } from "../context";
 import { Pattern } from "../store/reducer";
 import { PatternStatus } from "./PatternStatus";
@@ -47,8 +47,38 @@ export const PatternBlock: FC<PatternBlockProps> = ({
     navigator.clipboard.writeText(pattern);
   };
 
+  const patternVariant = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        when: "beforeChildren",
+      },
+    },
+  };
+
   return (
-    <div className="white-block pattern-block">
+    <motion.div
+      className="white-block pattern-block"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={patternVariant}
+    >
       <div
         className={`pattern-block__head pattern-block__head--${tagsArr.pop()}`}
       >
@@ -119,6 +149,6 @@ export const PatternBlock: FC<PatternBlockProps> = ({
           </ul>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
