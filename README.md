@@ -39,6 +39,7 @@ All patterns are contained in the patterns.json file. Each pattern has a localiz
 - React
 - SCSS
 - immer
+- framer-motion
 
 ## 📑 License
 
