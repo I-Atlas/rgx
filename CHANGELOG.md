@@ -13,4 +13,4 @@
 - add `react-helmet` and `react-snap` for seo
 - add `Meta` component
 - add mapping routes and meta constants
-- add sitemap generator and new scripts
+- add new scripts
