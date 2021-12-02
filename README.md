@@ -1,7 +1,6 @@
 # [RGX](https://rgx.vercel.app/)
 
 ![GitHub](https://img.shields.io/github/license/I-Atlas/rgx?style=flat-square)
-[![Iliya Bolotov](https://img.shields.io/badge/iliya-bolotov-%23ff6f61?style=flat-square&logo=appveyor)](https://github.com/I-Atlas)
 
 <a href="https://rgx.vercel.app/">
     <img src="https://i.imgur.com/D1FOJUr.png" alt="RGX">
@@ -38,8 +37,9 @@ All patterns are contained in the patterns.json file. Each pattern has a localiz
 - TypeScript
 - React
 - SCSS
-- immer
-- framer-motion
+- Immer
+- Framer Motion
+- React Helmet
 
 ## 📑 License
 

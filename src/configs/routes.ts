@@ -28,7 +28,7 @@ export const routes: Route[] = [
     Component: HomePage,
     metaInfo: {
       title: "Home",
-      description: `Home`,
+      description: `A set of ready-made regular expressions.`,
     },
   },
   {
@@ -38,7 +38,7 @@ export const routes: Route[] = [
     Component: HomePage,
     metaInfo: {
       title: "Home",
-      description: `Home - Tags`,
+      description: `A set of ready-made regular expressions.`,
     },
   },
 ];
