@@ -1,14 +1,15 @@
 import { FC, useContext } from "react";
-import { RouteComponentProps } from "react-router-dom";
+import { useMatch } from "react-router-dom";
+import { Meta } from "../components/Meta";
 import { PatternBlock } from "../components/PatternBlock";
+import { getRouteMetaInfo } from "../configs/routes";
 import { StateContext } from "../context";
 import { NotFoundPage } from "./NotFoundPage";
 
-export const HomePage: FC<RouteComponentProps<{ name: string }>> = ({
-  match,
-}) => {
+export const HomePage: FC = () => {
   const { items, searchValue } = useContext(StateContext);
-  const tagName = match.params.name;
+  const match = useMatch({ path: "/tags/:name" });
+  const tagName = match?.params.name;
   const result = items.filter((obj) =>
     obj.tags
       .toLocaleLowerCase()
@@ -23,6 +24,7 @@ export const HomePage: FC<RouteComponentProps<{ name: string }>> = ({
 
   return (
     <div className="patterns">
+      <Meta {...getRouteMetaInfo('Home')} />
       {result.map((obj) => (
         <PatternBlock key={obj.pattern} {...obj} />
       ))}

@@ -1,17 +1,17 @@
-import produce, { Draft } from 'immer';
-import { Actions, ActionTypes } from './actions';
-import patternsArr from '../assets/core/patterns.json';
+import produce, { Draft } from "immer";
+import { Actions, ActionTypes } from "./actions";
+import patternsArr from "../assets/core/patterns.json";
 
 export interface State {
   items: Pattern[];
   searchValue: string;
   isLoaded: boolean;
-  lang: 'en' | 'ru';
+  lang: "en" | "ru";
 }
 
 export interface Pattern {
-  title: Record<State['lang'], string>;
-  description: Record<State['lang'], string>;
+  title: Record<State["lang"], string>;
+  description: Record<State["lang"], string>;
   pattern: string;
   placeholder: string;
   tags: string;
@@ -21,9 +21,9 @@ export interface Pattern {
 
 export const initialState: State = {
   items: patternsArr,
-  searchValue: '',
+  searchValue: "",
   isLoaded: false,
-  lang: window.navigator.language.split('-')[0] as State['lang'],
+  lang: window.navigator.language.split("-")[0] as State["lang"],
 };
 
 export const reducer = produce((draftState: Draft<State>, action: Actions) => {
@@ -37,7 +37,7 @@ export const reducer = produce((draftState: Draft<State>, action: Actions) => {
       break;
 
     case ActionTypes.CLEAR_FILTERS:
-      draftState.searchValue = '';
+      draftState.searchValue = "";
       break;
 
     default:

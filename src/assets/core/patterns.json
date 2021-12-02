@@ -1,6 +1,9 @@
 [
   {
-    "title": { "en": "Firstname / lastname validation", "ru": "Проверка имени или фамилии (EN)" },
+    "title": {
+      "en": "Firstname / lastname validation",
+      "ru": "Проверка имени или фамилии (EN)"
+    },
     "description": {
       "en": "Check if the text is a valid firstname or lastname. It allows Characters,'- and space only",
       "ru": "Проверяет, что вводимый текст является фамилией или именем. Допускаются: ' и -"
@@ -12,7 +15,10 @@
     "priority": 3
   },
   {
-    "title": { "en": "Periodic table elements", "ru": "Элементы периодической таблицы" },
+    "title": {
+      "en": "Periodic table elements",
+      "ru": "Элементы периодической таблицы"
+    },
     "pattern": "/\\b(?:A[cglmr-u]|B[aehikr]?|C[adefl-orsu]?|D[bsy]|E[rsu]|F[elmr]?|G[ade]|H[efgos]?|I[nr]?|Kr?|L[airuv]|M[dgont]|N[abdeiop]?|Os?|P[abdmortu]?|R[abe-hnu]|S[bcegimnr]?|T[abcehilm]|U(?:u[opst])?|V|W|Xe|Yb?|Z[nr])\\b/g",
     "placeholder": "Au",
     "description": {
@@ -24,7 +30,10 @@
     "priority": 0
   },
   {
-    "title": { "en": "Unix directory (file) path", "ru": "Unix путь к директории (файлу)" },
+    "title": {
+      "en": "Unix directory (file) path",
+      "ru": "Unix путь к директории (файлу)"
+    },
     "description": {
       "en": "It takes the path to the file or directory. Works only with Unix-like paths",
       "ru": "Принимает путь к файлу или директории. Работает только с путями Unix вида"
@@ -75,7 +84,10 @@
     "priority": 3
   },
   {
-    "title": { "en": "Date and time in ISO-8601 format", "ru": "Дата и время в формате ISO-8601" },
+    "title": {
+      "en": "Date and time in ISO-8601 format",
+      "ru": "Дата и время в формате ISO-8601"
+    },
     "description": {
       "en": "Will match a valid date and times in the ISO-8601 format, excludes durations.",
       "ru": "Значение должно соответствовать действительной дате и времени в \n формате ISO-8601, исключая длительности."
@@ -87,7 +99,10 @@
     "priority": 3
   },
   {
-    "title": { "en": "Date in format dd/mm/yyyy", "ru": "Дата в формате dd/mm/yyyy" },
+    "title": {
+      "en": "Date in format dd/mm/yyyy",
+      "ru": "Дата в формате dd/mm/yyyy"
+    },
     "description": {
       "en": "Will match dates with dashes, slashes or with spaces (e.g. dd-mm-yyyy dd/mm/yyyy dd mm yyyy), and optional time separated by a space or a dash (e.g. dd-mm-yyyy-hh:mm:ss or dd/mm/yyyy hh:mm:ss).",
       "ru": "Дата состоящая из: тире, косой черты или пробела (например, dd-mm-yyyy dd / mm / yyyy dd mm yyyy) и необязательное время, разделенное пробелом или тире (например, dd-mm-yyyy-hh: mm: ss Или dd / mm / yyyy hh: mm: ss)."
@@ -147,7 +162,10 @@
     "priority": 2
   },
   {
-    "title": { "en": "2-5 letters palindromes", "ru": "2-5 буквенные палиндромы" },
+    "title": {
+      "en": "2-5 letters palindromes",
+      "ru": "2-5 буквенные палиндромы"
+    },
     "pattern": "\\b(\\w)?(\\w)\\w?\\2\\1",
     "placeholder": "noon",
     "description": {
@@ -183,7 +201,10 @@
     "priority": 0
   },
   {
-    "title": { "en": "Windows directory (file) path", "ru": "Windows путь к директории (файлу)" },
+    "title": {
+      "en": "Windows directory (file) path",
+      "ru": "Windows путь к директории (файлу)"
+    },
     "description": {
       "en": "It takes the path to the file or directory. Works only with Windows paths (C:\\Windows\\system32\\sysconf.exe etc.)",
       "ru": "Принимает путь к файлу или директории. Работает только с путями Windows (C:\\Windows\\system32\\sysconf.exe и т.д.)"
@@ -198,7 +219,10 @@
     "title": { "en": "IPv6 Address", "ru": "IPv6 адрес" },
     "pattern": "^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$",
     "placeholder": "2001:db8:a0b:12f0::1",
-    "description": { "en": "Match IPv6 addresses", "ru": "Соответствует IPv6 адресу" },
+    "description": {
+      "en": "Match IPv6 addresses",
+      "ru": "Соответствует IPv6 адресу"
+    },
     "tags": "ip,ipv6,ip adress,adress,other",
     "author": "@I-Atlas",
     "priority": 3
@@ -216,7 +240,10 @@
     "priority": 0
   },
   {
-    "title": { "en": "U.S./Canadian ZIP/Postal Code", "ru": "Индекс США/Канады" },
+    "title": {
+      "en": "U.S./Canadian ZIP/Postal Code",
+      "ru": "Индекс США/Канады"
+    },
     "pattern": "(^\\d{5}(-\\d{4})?$)|(^[A-Z]{1}\\d{1}[A-Z]{1} *\\d{1}[A-Z]{1}\\d{1}$)",
     "placeholder": "20151",
     "description": {
@@ -267,7 +294,10 @@
     "title": { "en": "IPv4 Address", "ru": "IPv4 адрес" },
     "pattern": "/\\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\\b/ig",
     "placeholder": "192.168.0.1",
-    "description": { "en": "Match IPv4 addresses", "ru": "Соответствует IPv4 адресу" },
+    "description": {
+      "en": "Match IPv4 addresses",
+      "ru": "Соответствует IPv4 адресу"
+    },
     "tags": "ip,ipv4,adress,ip adress,other",
     "author": "@I-Atlas",
     "priority": 3

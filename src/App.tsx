@@ -1,12 +1,13 @@
 import { useReducer, useEffect, useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Panels } from "./components/Panels";
 import { StateContext } from "./context";
-import { HomePage } from "./pages/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { initialState, reducer } from "./store/reducer";
+import { routes } from "./configs/routes";
+import { Meta } from "./components/Meta";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+      <Meta />
       <Panels />
       {isAnimationEnd && (
         <div className="App">
@@ -29,11 +31,12 @@ function App() {
             <BrowserRouter>
               <StateContext.Provider value={{ ...state, dispatch }}>
                 <Header />
-                <Switch>
-                  <Route exact path="/" component={HomePage} />
-                  <Route exact path="/tags/:name" component={HomePage} />
-                  <Route component={NotFoundPage} />
-                </Switch>
+                <Routes>
+                  {routes.map(({ path, Component, id }) => (
+                    <Route key={id} path={path} element={<Component />} />
+                  ))}
+                  <Route element={<NotFoundPage />} />
+                </Routes>
                 <Footer />
               </StateContext.Provider>
             </BrowserRouter>
