@@ -16,7 +16,7 @@ export const Panels: FC<PanelsProps> = () => {
           times: [0, 0.5, 1],
         }}
         className="left-panel"
-      ></motion.div>
+      />
       <motion.div
         initial={{ height: 0 }}
         animate={{
@@ -30,7 +30,7 @@ export const Panels: FC<PanelsProps> = () => {
           times: [0, 0.5, 1],
         }}
         className="right-panel"
-      ></motion.div>
+      />
     </>
   );
 };

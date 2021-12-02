@@ -1,9 +1,9 @@
-import { Pattern } from './reducer';
+import { Pattern } from "./reducer";
 
 export enum ActionTypes {
-  CLEAR_FILTERS = 'CLEAR_FILTERS',
-  SET_ITEMS = 'SET_ITEMS',
-  SET_SEARCH_VALUE = 'SET_SEARCH_VALUE',
+  CLEAR_FILTERS = "CLEAR_FILTERS",
+  SET_ITEMS = "SET_ITEMS",
+  SET_SEARCH_VALUE = "SET_SEARCH_VALUE",
 }
 
 type SetItemsAction = {
@@ -34,4 +34,7 @@ export const clearFilters = (): ClearFiltersAction => ({
   type: ActionTypes.CLEAR_FILTERS,
 });
 
-export type Actions = SetItemsAction | SetSearchValueAction | ClearFiltersAction;
+export type Actions =
+  | SetItemsAction
+  | SetSearchValueAction
+  | ClearFiltersAction;

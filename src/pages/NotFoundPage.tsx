@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
+import { Meta } from "../components/Meta";
 
 function randomRange(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -33,8 +34,8 @@ export const NotFoundPage: FC = () => {
   const randomImg = `/images/${randomRange(1, 5)}.svg`;
 
   return (
-    <motion.div animate={{ scale: 1.1 }}
-    transition={{ duration: 0.5 }}>
+    <motion.div animate={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <Meta />
       <div className="patterns__no-result">
         <img width={400} height={400} src={randomImg} alt="Not found" />
         <h2>{randomInfo.title}</h2>

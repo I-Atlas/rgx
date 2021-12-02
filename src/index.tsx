@@ -7,13 +7,19 @@ import "react-tippy/dist/tippy.css";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
+const appElement = (
   <StrictMode>
     <Panels />
     <App />
-  </StrictMode>,
-  document.getElementById("root"),
+  </StrictMode>
 );
+
+const rootElement = document.getElementById("root");
+const hasChildNodes = !!rootElement?.hasChildNodes();
+
+hasChildNodes
+  ? ReactDOM.hydrate(appElement, rootElement)
+  : ReactDOM.render(appElement, rootElement);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

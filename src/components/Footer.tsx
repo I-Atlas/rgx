@@ -5,10 +5,10 @@ export const Footer: FC = () => {
     <div className="footer">
       <ul>
         <li>
-          <span>© 2021 RGX</span>
+          <span>{`Copyright © ${new Date().getFullYear()} RGX. All Rights Reserved.`}</span>
         </li>
         <li>
-          <a href="https://iliya-bolotov.space/">Space</a>
+          <a href="https://bolotov-iliya.space/">Space</a>
         </li>
         <li>
           <a href="https://github.com/I-Atlas/rgx">GitHub</a>
